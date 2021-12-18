@@ -2,6 +2,10 @@
 ### You can use this repository whenever you want
 ### Used for a video
 
+<img src="3.png">
+<img src="1.png">
+<img src="2.png">
+
 Create the database:
 python -m dbutils
 
