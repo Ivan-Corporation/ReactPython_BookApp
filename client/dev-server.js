@@ -11,7 +11,7 @@ const apiProxy = createProxyMiddleware('/api', {
 app.use(apiProxy);
 
 // parcel options
-const options = {minify:false, cache: false, outDir: 'dist/dev', logLevel: 4};
+const options = { minify: false, cache: false, outDir: 'dist/dev', logLevel: 4 };
 
 const bundler = new Bundler('src/index.html', options);
 app.use(bundler.middleware());

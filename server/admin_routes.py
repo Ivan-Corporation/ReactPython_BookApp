@@ -3,6 +3,8 @@ from werkzeug.security import check_password_hash, generate_password_hash
 import flask_login
 import logging
 
+# Валидация логина
+
 log = logging.getLogger(__name__)
 
 admin_api = Blueprint('admin_api', __name__, url_prefix='/api')
@@ -56,4 +58,3 @@ def getUser():
 @flask_login.login_required
 def keepAlive():
     return jsonify({"OK": 200})
-

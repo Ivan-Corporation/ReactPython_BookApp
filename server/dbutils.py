@@ -20,6 +20,8 @@ def create_db(autopopulate):
     with sqlite3.connect(DB_FILE) as conn:
         cur = conn.cursor()
 
+    # Создаём таблицы
+
         # sqlite foreign key support is off by default
         cur.execute("PRAGMA foreign_keys = ON")
         conn.commit()
@@ -49,27 +51,27 @@ def create_db(autopopulate):
                     "Title TEXT NOT NULL,"
                     "Author TEXT,"
                     "Publisher TEXT "
-                      "REFERENCES Publishers(Publisher) "
-                      "ON UPDATE CASCADE ON DELETE RESTRICT,"
+                    "REFERENCES Publishers(Publisher) "
+                    "ON UPDATE CASCADE ON DELETE RESTRICT,"
                     "IsFiction BOOLEAN DEFAULT 0,"
                     "Category TEXT "
-                      "REFERENCES Categories(Category) "
-                      "ON UPDATE CASCADE ON DELETE RESTRICT,"
+                    "REFERENCES Categories(Category) "
+                    "ON UPDATE CASCADE ON DELETE RESTRICT,"
                     "Edition TEXT,"
                     "DatePublished TEXT,"
                     "ISBN TEXT,"
                     "Pages INTEGER,"
                     "DateAcquired DATE,"
                     "Condition TEXT "
-                      "REFERENCES Conditions(Code) "
-                      "ON UPDATE CASCADE ON DELETE RESTRICT,"
+                    "REFERENCES Conditions(Code) "
+                    "ON UPDATE CASCADE ON DELETE RESTRICT,"
                     "Format TEXT "
-                      "REFERENCES Formats(Format) "
-                      "ON UPDATE CASCADE ON DELETE RESTRICT,"
+                    "REFERENCES Formats(Format) "
+                    "ON UPDATE CASCADE ON DELETE RESTRICT,"
                     "Location TEXT,"
                     "Notes TEXT"
                     ")"
-                   )
+                    )
         conn.commit()
         cur.close()
 
@@ -127,4 +129,3 @@ def _main():
 if __name__ == '__main__':
     connect(True)
     _main()
-

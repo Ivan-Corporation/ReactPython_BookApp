@@ -8,6 +8,7 @@ import dbutils as db
 from admin_routes import admin_api, User
 from db_routes import db_api
 
+# API и прочее
 
 fmt = "[%(asctime)s]|%(levelname)s|[%(module)s]:%(funcName)s()|%(message)s"
 logging.basicConfig(format=fmt)
@@ -81,4 +82,3 @@ def index():
 
 if __name__ == "__main__":
     app.run(debug=True, port=8000)
-

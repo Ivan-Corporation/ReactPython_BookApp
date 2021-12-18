@@ -42,13 +42,13 @@ def LandingPageMenu(props):
                         'keepMounted': True,
                         'open': bool(mainMenu),
                         'onClose': mainMenuClose,
-                       },
+                        },
                  el(MenuItem, {'onClick': lookupMenuOpen,
                                'disabled': not isLoggedIn}, "Lookup  Tables"),
                  el(MenuItem, {'onClick': handleAbout}, "About"),
                  el(MenuItem, {'onClick': handleLogout,
                                'disabled': not isLoggedIn}, "Logout"),
-                ),
+                 ),
               el(Menu, {'id': 'lookup-menu',
                         'anchorEl': lookupMenu,
                         'keepMounted': True,
@@ -56,12 +56,10 @@ def LandingPageMenu(props):
                         'onClose': lookupMenuClose,
                         'transformOrigin': {'vertical': 'top',
                                             'horizontal': 'center'},
-                       },
+                        },
                  [el(MenuItem, {'key': table['name'],
                                 'onClick': handleLookup
-                               }, table['name']) for table in lookup_tables
-                 ],
-                )
-             )
-
-
+                                }, table['name']) for table in lookup_tables
+                  ],
+                 )
+              )

@@ -1,7 +1,21 @@
-<<<<<<< HEAD
 ## React+Python Books App
 ### You can use this repository whenever you want
 ### Used for a video
+
+Create the database:
+python -m dbutils
+
+Start the web server:
+python -m appserver
+
+Activate the virtual environment: (ON THE CLIENT SIDE!)
+venv\Scripts\activate (Windows)
+source venv/bin/activate (Mac/Linux)
+
+npm run dev on client folder!
+
+login - admin
+password - 123
 
 <h3>JS Dependencies</h3>
 <ul>
@@ -20,8 +34,3 @@
 <li>"react-ga"
 <li>"react-modal"
 </ul>
-=======
-## React Python Book App example for video
-### you can 
-
->>>>>>> 2f878fc719a3feb23ca178a8a49af0a58da4c2cb
